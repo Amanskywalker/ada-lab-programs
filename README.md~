@@ -11,12 +11,12 @@ it required R to process the data and produce a graph (saved as figure.png) to s
 
 if u don't have R installed use 
 
---sudo apt-get -y install r-base
+sudo apt-get -y install r-base
 
 to install the R
 
 usage: bash testbench_*.bash [file] [test]
 
- [file] 	file name <name>.c or <name>.cpp
- [test]		an integer value the number of time the test has to be performed
+ [file] 	--file name <name>.c or <name>.cpp
+ [test]		--an integer value the number of time the test has to be performed
 			defult increment value in 100 (can be changed in testbench_*.bash file) 
