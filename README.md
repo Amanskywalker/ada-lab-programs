@@ -20,3 +20,21 @@ usage: bash testbench_*.bash [file] [test]
  [file] 	file name <name>.c or <name>.cpp
  [test]		an integer value the number of time the test has to be performed
 			defult increment value in 100 (can be changed in testbench_*.bash file) 
+
+
+also use 
+
+passing argument by commandline (container vector)
+
+i.e.
+
+int main(int argc,char *argv[])
+{
+}
+
+else it wont able to pass argument for test
+
+also don't take any user input in your program 
+
+You can refer sample (sample.cpp) program to get the idea on who to write compatiable program for testing
+

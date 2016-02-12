@@ -6,7 +6,7 @@ echo "argument $2 ";
 
 echo "Compiling file";
 
-g++ $1 -o "${1%.*}" 
+g++ $1 -o "${1%.*}" ;
 
 echo "Testing the file";
 
@@ -22,6 +22,8 @@ echo "running r to plot graph";
 R < script.r --no-save;
 
 echo "Clearing up the messes";
+
+cp figure.png ${1%.*}.png;
+
 rm output.txt;
-
-
+rm figure.png;
