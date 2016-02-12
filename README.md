@@ -7,7 +7,7 @@ These programs are written in linux environment and compiled using the GCC & g++
 
 testbench_c.bash or testbench_c++.bash are the script written in bash to test the algorithm written in c or c++
 
-it required R to process the data and produce a graph (saved as <name>.png) to show the time and no of input relationship 
+it required R to process the data and produce a graph (saved as <name>.png) to show the time and no. of input relationship 
 
 if u don't have R installed use 
 

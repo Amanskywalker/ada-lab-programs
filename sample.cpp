@@ -1,6 +1,7 @@
 /*
- * This is a sample program 
- * It just for template to how to write program  
+ * This is a sample program
+ * It just for template to how to write program
+ * Program to perform bubble sort
  * */
 
 #include <iostream>
@@ -16,7 +17,7 @@ int main(int argc,char *argv[])
 		int n;
 		n=atoi(argv[1]);			// changing the string to its equivalent int
 		int temp,a[n];				// creating the array
-		float s,e,t;		
+		float s,e,t;
 		for(int i=0;i<n;++i)		//generating the random value for the test
 			a[i]=rand()%10000;
 		s=clock();					// code for algorithm
