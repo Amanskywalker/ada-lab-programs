@@ -6,7 +6,7 @@ echo "argument $2 ";
 
 echo "Compiling file";
 
-gcc $1 -o "${1%.*}" ;
+gcc $3 $1 -o "${1%.*}" ;
 
 echo "Testing the file";
 

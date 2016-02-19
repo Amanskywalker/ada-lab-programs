@@ -16,7 +16,7 @@ int *a;
 void merge(int low, int mid, int high)
 {
 	int i, j, k;
-	int b[6000];
+	int b[10000];
 	i = low;
 	j = mid + 1;
 	k = low;
