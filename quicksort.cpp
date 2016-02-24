@@ -60,10 +60,11 @@ int main(int argc,char *argv[])
 	quicksort(a,0,n-1);
 	end=clock();	
 	t=(end-start)/CLOCKS_PER_SEC;
-	for(i=0;i<n;i++)
-		cout<<a[i]<<"  ";
-	cout<<endl;
-	cout<<"time="<<t<<endl;
+	//for(i=0;i<n;i++)
+	//	cout<<a[i]<<"  ";
+	//cout<<endl;
+	//cout<<"time="<<t<<endl;
+	cout<<"\n "<<n<<"\t"<<t<<"\n";
 	return 0;
 }					
 					
