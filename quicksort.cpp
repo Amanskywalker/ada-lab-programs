@@ -65,7 +65,8 @@ int main(int argc,char *argv[])
 		cout<<a[i]<<"  ";
 	cout<<endl;
 	*/
-	cout<<"\n "<<n<<"\t"<<t<<"\n";  // to displaying in a way so the r can read it
+	//cout<<"\n "<<n<<"\t"<<t<<"\n";  // to displaying in a way so the r can read it
+	cout<<t<<"\n";  
 	return 0;
 }
 

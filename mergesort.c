@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
 	}
 	end_time = omp_get_wtime();
 	//printf("Elapse time is %lf\n",(end_time - start_time));
-	printf("\n%d\t%lf\n",size,(end_time-start_time));
+	printf("\n%d\t%lf\t",size,(end_time-start_time));
 	return 0;
 }
 
