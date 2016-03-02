@@ -60,13 +60,16 @@ int main(int argc,char *argv[])
 	quicksort(a,0,n-1);
 	end=clock();
 	t=(end-start)/CLOCKS_PER_SEC;
+
 	/* 	use this for checking the output
-	for(i=0;i<n;i++)
+	for(i=0;i<n;++i)
 		cout<<a[i]<<"  ";
 	cout<<endl;
 	*/
+
 	//cout<<"\n "<<n<<"\t"<<t<<"\n";  // to displaying in a way so the r can read it
-	cout<<t<<"\n";  
+
+	cout<<"\n "<<n<<"\t"<<t<<"\n";  // to displaying in a way so the r can read it
 	return 0;
 }
 
