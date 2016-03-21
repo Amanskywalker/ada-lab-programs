@@ -47,7 +47,7 @@ void kruskal(int n,int cost[10][10],int r[10])
      if(i!=j)
      {
      select[k][0]=u;
-     select[k][i]=v;
+     select[k][1]=v;
      count++;
      k++;
      sum=sum+cost[u][v];
