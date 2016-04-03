@@ -40,7 +40,7 @@ void kruskal(int n,int cost[10][10],int r[10])
          u=i;
          v=j;
          }
-        }  
+        }
       }
      i=find(u,r);
      j=find(v,r);
@@ -62,7 +62,7 @@ void kruskal(int n,int cost[10][10],int r[10])
         printf("the edges are\n");
         for(i=0;i<n-1;i++)
         {
-    
+
            printf("\t%d->%d\n",select[i][0],select[i][1]);
         }
       }
@@ -77,7 +77,7 @@ int find(int u,int r[10])
 }
 
 void unionij(int i,int j,int r[],int n)
-{    
+{
   int k;
   if(i<j)
   {
@@ -96,9 +96,7 @@ void unionij(int i,int j,int r[],int n)
         for(k=1;k<=n;k++)
         {
         if(r[k]==i)
-        r[k]=j; 
+        r[k]=j;
         }
-      } 
+      }
 }
-  
-
