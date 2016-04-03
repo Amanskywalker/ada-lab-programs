@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int i, j, k, n, u, v, a, b, ne=1, parent[10], cost[10][10], min, mincost=0;
+int i, j, k, a, b, u, v, n, ne = 1, min, mincost = 0, cost[9][9], parent[9];
 
 int find(int i)
 {
@@ -37,9 +37,9 @@ int main(int argc, char const *argv[])
   printf("The edge of Minimum Spanning tree is \n");
   while (ne < n)
   {
-    for (i = 1, min = 999 ; i < n; i++)
+    for (i = 1, min = 999 ; i <= n; i++)
     {
-      for (j = 1; j < n; j++)
+      for (j = 1; j <= n; j++)
       {
         if (cost[i][j] < min)
         {
@@ -56,7 +56,7 @@ int main(int argc, char const *argv[])
       printf("%d edge(%d, %d) = %d\n",ne++,a,b,min);
       mincost += min;
     }
-    cost[a][b]=cost[b][a];
+    cost[a][b]=cost[b][a]=999;
   }
   printf("Minimum cost  =  %d\n", mincost);
   return 0;
