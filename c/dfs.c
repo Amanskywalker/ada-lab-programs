@@ -1,5 +1,5 @@
 /*
-  Programme to check if a graph is connected using DFS traversal
+  Check whether a given graph is connected or not using DFS method.
 */
 
 #include<stdio.h>
@@ -11,7 +11,7 @@ void Dfs(int src)
 {
   int j;
   vis[src] = 1 ;
-  for (j = 0; j <= n; ++j)
+  for (j = 0; j < n; ++j)
   {
     if (a[src][j] == 1 && vis[j] == 0)
     {
@@ -26,14 +26,14 @@ int main(int argc, char const *argv[])
   printf("Implementation of DFS traversal \n enter the number of verticies \n : ");
   scanf("%d",&n);
   printf("Enter the Adjecency matrix\n");
-  for (i = 0; i <= n; ++i)
-    for (j = 0; j <= n; j++)
+  for (i = 0; i < n; ++i)
+    for (j = 0; j < n; j++)
       scanf("%d",&a[i][j]);
 
   printf("Enter the Source vertex\n");
   scanf("%d",&src);
   Dfs(src);
-  for (j = 0; j <= n; ++j)
+  for (j = 0; j < n; ++j)
   {
     if(vis[j] != 1)
     {
