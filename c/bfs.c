@@ -36,15 +36,14 @@ void Bfs()
 int main(int argc, char const *argv[])
 {
   int i, j;
-  printf("\nimplementation of BFS taversal\n");
-	printf("enter the number of verticies of the graph\n");
-	scanf("%d", &n);
-	printf("enter the adjecency matrix\n");
-	for( i = 1; i <= n; i++)
-		for( j = 1; j <= n; j++)
-			scanf("%d",&a[i][j]);
-	printf("enter the source vertex\n");
-	scanf("%d",&src);
+  printf("Implementation of BFS traversal \n Enter the number of verticies \n : ");
+  scanf("%d",&n);
+  printf("Enter the Adjecency matrix\n");
+  for (i = 0; i < n; ++i)
+    for (j = 0; j < n; j++)
+      scanf("%d",&a[i][j]);
+  printf("Enter the Source vertex\n");
+  scanf("%d",&src);
 	Bfs();
   return 0;
 }
