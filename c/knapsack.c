@@ -30,7 +30,7 @@ void knapsack(int no, int wt, int pt[MAX], int weight[MAX])
       printf("%d\t",x[i]);
     printf("\n");
 }
-g
+
 int main(int argc, char const *argv[])
 {
   int no,wt,pt[MAX]={0},weight[MAX]={0},i;
