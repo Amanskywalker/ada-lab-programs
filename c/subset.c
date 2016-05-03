@@ -57,10 +57,9 @@ int main(int argc, char *argv[])
 	scanf("%d", &fsum);
 
 	/*
-	 * If the sum of all the entered elements is greater than
-	 * the required sum, or if the first element itself is
-	 * greater than the required sum, No solution exists.
-	 */
+	If the sum of all the entered elements is greater than the required sum,
+	or if the first element itself is greater than the required sum, No solution exists.
+	*/
 
 	if(sum < fsum || elem[0] > fsum)
 		printf ("No solution\n");
