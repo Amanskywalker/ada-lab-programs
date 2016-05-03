@@ -1,6 +1,5 @@
 /*
-* Find Minimum Cost Spanning Tree of a given undirected graph
-* using Kruskal's algorithm.
+  Find Minimum Cost Spanning Tree of a given undirected graph using Kruskal's algorithm.
 */
 
 #include <stdio.h>
