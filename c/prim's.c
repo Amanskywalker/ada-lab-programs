@@ -13,7 +13,6 @@ void prims(int n,int cost[10][10])
     min=999;
     for(i=1;i<=n;i++)
    {
-  
       for(j=1;j<=n;j++)
       {
       if((visit[i]==1)&&(visit[j]!=1))
@@ -60,4 +59,3 @@ int main()
   prims(n,cost);
   return 0;
 }
-
