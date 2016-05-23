@@ -1,4 +1,4 @@
-// Nqueens peoblem
+// Nqueens problem
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -35,7 +35,7 @@ void fnChessBoardShow(int n, int row[MAX])
   printf("\n");
 }
 
-int NQueen(int k,int n, int row[MAX])
+void NQueen(int k,int n, int row[MAX])
 {
   int i;
   for(i=0;i<n;i++)
@@ -47,12 +47,10 @@ int NQueen(int k,int n, int row[MAX])
       {
         fnChessBoardShow(n,row);
         SolnCount++;
-        return 1;
       }
       NQueen(k+1, n, row);
     }
   }
-  return 0;
 }
 
 int main(int argc, char const *argv[])
@@ -61,9 +59,32 @@ int main(int argc, char const *argv[])
   int row[MAX];
   printf ("Enter the size of the board\n");
 	scanf("%d", &n);
-  if (!NQueen(0,n,row))
+  NQueen(0,n,row);
+  if (SolnCount == 0)
     printf("No solution exists for the given problem instance.\n");
   else
     printf("Number of solution for the given problem instance is : %d \n",SolnCount);
   return 0;
 }
+
+/*Output
+Enter the size of the board
+4
+
+Solution # 1
+
+# Q # #
+# # # Q
+Q # # #
+# # Q #
+
+
+Solution # 2
+
+# # Q #
+Q # # #
+# # # Q
+# Q # #
+
+Number of solution for the given problem instance is : 2
+*/

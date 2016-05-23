@@ -40,3 +40,16 @@ int main(int argc, char *argv[])
 	}
 	return 0;
 }
+
+/*Output
+Enter The No of Vertices
+5
+Enter the Adjacency Matrix
+0 0 1 0 0
+0 0 1 0 0
+0 0 0 1 1
+0 0 0 0 1
+0 0 0 0 0
+Topological sort is :
+1	2	3	4	5
+*/

@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define max(a, b) (a > b ? a : b)
+#define MAX(a, b) (a > b ? a : b)
 
 void warshal(int p[10][10], int n)
 {
@@ -13,7 +13,7 @@ void warshal(int p[10][10], int n)
 	for(k = 1; k <= n; k++)
 		for(i = 1; i <= n; i++)
 			for(j = 1; j <= n; j++)
-				p[i][j] = max(p[i][j], p[i][k] && p[k][j]);
+				p[i][j] = MAX(p[i][j], p[i][k] * p[k][j]);
 }
 
 void main()
@@ -24,8 +24,8 @@ void main()
 	printf ("Enter the Adjacency matrix\n");
 	for(i = 1; i <= n; i++)
 		for(j = 1; j <= n; j++)
-			scanf("%d", p[i][j]);
-	warshal(p, n);
+			scanf("%d",&p[i][j]);
+	warshal(p,n);
 	printf("\n Transitive closure: \n");
 	for(i = 1; i <= n; i++)
 	{
@@ -34,3 +34,19 @@ void main()
 		printf("\n");
 	}
 }
+
+/*Output
+Enter the size of matrix
+4
+Enter the Adjacency matrix
+0 1 0 0
+0 0 0 1
+0 0 0 0
+1 0 1 0
+
+ Transitive closure:
+1	1	1	1
+1	1	1	1
+0	0	0	0
+1	1	1	1
+*/
