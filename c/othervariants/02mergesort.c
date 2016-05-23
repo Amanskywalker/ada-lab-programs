@@ -1,11 +1,12 @@
 /*
+ * NOTE :- this program is designed to work with testbench script
  * Using OpenMP, implement a parallelized Merge Sort algorithm to
  * sort a given set of elements and determine the time required to
  * sort the elements. Repeat the experiment for different values of
  * n, the number of elements in the list to be sorted and plot a
  * graph of the time taken versus n. The elements can be read from
  * a file or can be generated using the random number generator
- */ 
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -96,4 +97,3 @@ int main(int argc, char *argv[])
 	printf("\n%d\t%lf\t",size,(end_time-start_time));
 	return 0;
 }
-

@@ -1,4 +1,6 @@
 /*
+NOTE :- this program is designed to work with testbench script
+
 Sort a given set of elements using the Quicksort method and
 determine the time required to sort the elements. Repeat the
 experiment for different values of n, the number of elements in the
