@@ -54,7 +54,7 @@ void kruskal(int n,int cost[][10],int r[10])
 				}
 			}
 		}
-	
+
 	i=find(u,r);
 	j=find(v,r);
 	if(i!=j)
@@ -70,60 +70,50 @@ void kruskal(int n,int cost[][10],int r[10])
 	}// end while
 	if(sum<999)
 	{
-		cout<<"spanning tree exists";
-		cout<<"the sum  is "<<sum<<endl;
-		cout<<"the edges are\n";
+		cout<<"\nSpanning tree exists\n";
+		cout<<"The sum  is "<<sum<<endl;
+		cout<<"The edges are\n";
 		for(i=0;i<n-1;i++)
 			cout<<"\t"<<select[i][0]<<"->"<<select[i][1]<<endl;
 	}
 	else
-		cout<<"spanning tree does not exist";
+		cout<<"\nSpanning tree does not exist\n";
 }
 
 
 int main()
 {
 	int i,j,cost[10][10],r[10],n;
-	cout<<"enter n:";
+	cout<<"Enter n :\n";
 	cin>>n;
 	for(i=1;i<=n;i++)
 		r[i]=i;
-	cout<<"enter matrix:\n";
-	for(i=1;i<=n;i++)				
+	cout<<"Enter matrix :\n";
+	for(i=1;i<=n;i++)
 			for(j=1;j<=n;j++)
 				cin>>cost[i][j];
-	
-	kruskal(n,cost,r);			
+
+	kruskal(n,cost,r);
 	return 0;
-}		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-						
+}
+
+/*Output
+Enter n :
+6
+Enter matrix :
+0 3 999 1 999 999
+3 0 1 3 999 999
+999 1 0 1 5 4
+1 3 1 0 6 999
+999 999 5 6 0 2
+999 999 4 999 2 0
+
+Spanning tree exists
+The sum  is 9
+The edges are
+	1->4
+	2->3
+	3->4
+	5->6
+	3->6
+*/
