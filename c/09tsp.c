@@ -10,6 +10,8 @@
 
 int a[10][10], visited[10], no, cost, sum, vs[10];
 
+int least(int c);
+
 void tsp(int city)
 {
 	int ncity;
@@ -43,7 +45,7 @@ int least(int c)
 	return nc;
 }
 
-void nearest_n(city)
+void nearest_n(int city)
 {
 	int min, j, i, u;
 	vs[city] = 1;
@@ -92,3 +94,22 @@ int main(int argc, char *argv[])
 	printf ("\nRatio is %f\n", (float)sum/cost);
 	return 0;
 }
+
+/*Output
+Enter the No of Cities
+4
+
+Enter the Adjacency Matrix
+0 10 15 20
+5 0 9 10
+6 13 0 2
+8 8 9 0
+Using Dynamic Prog
+1 ->2 ->4 ->3 ->1
+Cost is 35
+Using approx method
+1 -> 2 -> 3 -> 4 -> 1
+Cost is 29
+
+Ratio is 0.828571
+*/

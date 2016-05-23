@@ -68,3 +68,17 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+
+/*Output
+Enter the no of items
+4
+Enter the no's in ascending order
+7
+11
+13
+24
+Enter the required sum
+31
+Subset sol no 1 : 7 11 13
+Subset sol no 2 : 7 24
+*/

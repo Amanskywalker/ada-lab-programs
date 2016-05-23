@@ -44,3 +44,21 @@ int main(int argc, char const *argv[])
   printf("\nGraph is connected\n");
   return 0;
 }
+
+/*Output
+Implementation of DFS traversal
+ enter the number of verticies
+ : 7
+Enter the Adjecency matrix
+0 1 1 1 1 0 0
+1 0 0 0 0 1 0
+1 0 0 0 0 0 1
+1 0 0 0 0 1 0
+1 0 0 0 0 0 1
+0 1 0 1 0 0 0
+0 0 1 0 1 0 0
+Enter the Source vertex
+1
+
+Graph is connected
+*/

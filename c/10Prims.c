@@ -14,20 +14,15 @@ void prims(int a[10][10], int n)
 	{
 		mincost = 999;
 		for (i = 1; i <= n; i++)
-		{
 			for(j = 1; j <= n; j++)
-			{
 				if(elec[i] == 1)
-				{
 					if(a[i][j]< mincost)
 					{
 						u = i;
 						v = j;
 						mincost = a[i][j];
 					}
-				}
-			}
-		}
+
 		if(elec[v] != 1)
 		{
 			elec[v] = 1;
@@ -56,3 +51,16 @@ int main(int argc, char *argv[])
 	prims(a, no);
 	return 0;
 }
+
+/*Output
+Enter the no of vertices
+6
+Enter the matrix
+0 60 10 999 999 999
+60 0 999 20 40 70
+10 999 0 999 999 50
+999 20 999 0 999 80
+999 40 999 999 0 30
+999 70 50 80 30 0
+Mincost : 150
+*/
