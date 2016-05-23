@@ -8,15 +8,15 @@ void subset(int weightSofar,int k,int remaining)
 	x[k]=1;int i;
 	if(weightSofar+w[k]==d)
 	{
-		cout<<"sol:"<<++count<<endl;
+		cout<<"\nSol "<<++count<<": ";
 		for(i=0;i<=k;i++)
 		{
 			if(x[i]==1)
 			{
-				cout<<w[i];
+				cout<<w[i]<<"\t";
 			}
-			cout<<"\n";
-		}	
+
+		}
 		return;
 	}
 
@@ -39,18 +39,31 @@ void subset(int weightSofar,int k,int remaining)
 
 int main()
 {
-	int i,n,sum=0; 
-	cout<<"no f ele;";
+	int i,n,sum=0;
+	cout<<"No of elememts : ";
 	cin>>n;
-	cout<<"elements in asc order:";
+	cout<<"\nElements in asc order : \n";
 	for(i=0;i<n;i++)
 	{
 		cin>>w[i];
 		sum+=w[i];
 	}
-	cout<<"neter sum:";
+	cout<<"Enter sum : \n";
 	cin>>d;
 
 	subset(0,0,sum);
-	return 0;	
+	cout<<endl;
+	return 0;
 }
+
+/*Output
+No of elememts : 4
+
+Elements in asc order :
+7 11 13 24
+Enter sum :
+31
+
+Sol 1: 7	11	13
+Sol 2: 7	24
+*/

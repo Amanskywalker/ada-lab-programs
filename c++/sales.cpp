@@ -8,23 +8,20 @@ void get()
 		int i,j;
 		cout<<"Enter no of cities:";
 		cin>>n;
-		cout<<"enter the cost matrix:\n";
+		cout<<"Enter the cost matrix:\n";
 		for(i=1;i<=n;i++)
 		{
-				cout<<"enter element if row"<<i<<":";
-				for(j=1;j<=n;j++)
-					cin>>a[i][j];
-				visited[i]=0;
-
+			for(j=1;j<=n;j++)
+				cin>>a[i][j];
+			visited[i]=0;
 		}
-		cout<<"the cost list is :"<<endl;
-		for(i=0;i<=n;i++)
+		cout<<"The cost matrix is :\n";
+		for(i=1;i<=n;i++)
 		{
 			cout<<"\n\n";
 			for(j=1;j<=n;j++)
-				cout<<a[i][j]<<"   ";
-
-		}	
+				cout<<a[i][j]<<"\t";
+		}
 }
 
 int least(int c)
@@ -80,8 +77,8 @@ void nearest_neighbour(int city)
 				if(a[city][i] < min)
 				{
 					min=a[city][i];
-					u=i;	
-				}	
+					u=i;
+				}
 			city=u;
 		}
 		vs[u]=1;
@@ -91,30 +88,52 @@ void nearest_neighbour(int city)
 			cout<<u<<"->";
 		}
 	}
-	lastcity=u;	
+	lastcity=u;
 }
 
 
 void put()
 {
-	cout<<"\nmin cost"<<cost<<endl;
-}	
+	cout<<"\nMin cost"<<cost<<endl;
+}
 
 int main()
 {
 	float ratio;
 	get();
-	cout<<"The path is:";
+	cout<<"\nThe path is:";
 	mincost(1);
 	put();
-	cout<<"\nthe path using algorithm:";
+	cout<<"\nThe path using algorithm:";
 	nearest_neighbour(1);
 	cout<<"1";
 	sum+=a[lastcity][1];
-	cout<<"\nmin cost is:"<<sum;
+	cout<<"\nMin cost is:"<<sum;
 	ratio=(float)sum/cost;
-
-	cout<<"\nthe accurate ratio:"<<ratio<<endl;
+	cout<<"\nThe accurate ratio : "<<ratio<<endl;
 	return 0;
-
 }
+
+/*output
+Enter no of cities:4
+Enter the cost matrix:
+0 10 15 20
+5 0 9 10
+6 13 0 2
+8 8 9 0
+The cost matrix is :
+
+
+0	10	15	20
+
+5	0	9	10
+
+6	13	0	2
+
+8	8	9	0
+The path is:1->2->4->3->1
+Min cost35
+
+The path using algorithm:1->4->2->3->1
+Min cost is:25
+The accurate ratio : 0.714286

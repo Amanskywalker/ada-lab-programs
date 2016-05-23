@@ -29,23 +29,43 @@ void bfs(int a[][20],int n,int source)
 		if(visit[i]==1)
 			cout<<i<<" is reachable from "<<source<<endl;
 		else
-			cout<<i<<" is not rachable from "<<source<<endl;
+			cout<<i<<" is not reachable from "<<source<<endl;
 	}
 }
 
 int main()
 {
 	int a[20][20],source,i,j,n;
-	cout<<"enter no. of vertices:";
+	cout<<"Enter no. of vertices:\n";
 	cin>>n;
-	cout<<"enter adjacency matrix:";
+	cout<<"Enter adjacency matrix:\n";
 	for(i=1;i<=n;i++)
 		for(j=1;j<=n;j++)
 			cin>>a[i][j];
-	cout<<"entr source vertex:";
+	cout<<"Enter source vertex:";
 	cin>>source;
 	bfs(a,n,source);
-	
+
 	return 0;
-}			
-										
+}
+
+/*Output
+Enter no. of vertices:
+7
+Enter adjacency matrix:
+0 1 1 1 1 0 0
+1 0 0 0 0 1 0
+1 0 0 0 0 0 1
+1 0 0 0 0 1 0
+1 0 0 0 0 0 1
+0 1 0 1 0 0 0
+0 0 1 0 1 0 0
+Enter source vertex:1
+1 is reachable from 1
+2 is reachable from 1
+3 is reachable from 1
+4 is reachable from 1
+5 is reachable from 1
+6 is reachable from 1
+7 is reachable from 1
+*/
