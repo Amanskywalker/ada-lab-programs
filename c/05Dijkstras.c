@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
   printf("Enter cost matrix:\n");
   for (i = 1; i <=n; i++)
     for (j = 1; j <=n; j++)
-      scanf("%d\n",&cost[i][j]);
+      scanf("%d",&cost[i][j]);
   printf("Enter the source vertex\n");
   scanf("%d",&src);
   dij(src,cost,dist,n);
@@ -42,3 +42,20 @@ int main(int argc, char const *argv[])
     printf("to %d = %d \n",i,dist[i]);
   return 0;
 }
+
+/*Output
+Enter the number of vertices
+4
+Enter cost matrix:
+0 5 999 10
+5 0 7 999
+999 7 0 6
+10 999 6 0
+Enter the source vertex
+1
+The Shortest path to source 1 to other vertices are
+to 1 = 0
+to 2 = 5
+to 3 = 12
+to 4 = 10
+*/

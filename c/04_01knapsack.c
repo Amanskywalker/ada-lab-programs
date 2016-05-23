@@ -26,7 +26,7 @@ void knapsack(int no, int wt, int pt[MAX], int weight[MAX])
         x[i] = 1;
         wt -= weight[i];
       }
-    for (i = 0; i <= no; i++)
+    for (i = 1; i <= no; i++)
       printf("%d\t",x[i]);
     printf("\n");
 }
@@ -43,8 +43,22 @@ int main(int argc, char const *argv[])
     scanf("%d",&weight[i]);
   printf("Enter the Profit: \n");
   for (i = 1; i <= no; i++)
-    scanf("%d",&weight[i]);
+    scanf("%d",&pt[i]);
 
   knapsack(no,wt,pt,weight);
   return 0;
 }
+
+/*Output
+Enter the Number of objects :
+ :4
+Enter the total Weigth :
+ :5
+Enter the Weigths:
+2 1 3 2
+Enter the Profit:
+12 10 20 15
+Max profit : 37
+Edges are :
+1	1	0	1
+*/

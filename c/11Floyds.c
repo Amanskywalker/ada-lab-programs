@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
 {
   int size,a[10][10],i,j;
   printf("Enter the size\n");
-  scanf("%d\n",&size);
+  scanf("%d",&size);
   printf("Enter the Elements\n");
   for (i = 0; i < size; i++)
     for (j = 0; j < size; j++)
@@ -47,3 +47,95 @@ int main(int argc, char const *argv[])
   floyd(a,size);
   return 0;
 }
+
+/*Output
+Enter the size
+4
+0 999 3 999
+Enter the Elements
+^C
+chinmaya@chinmaya-Lenovo-G50-70:~/Documents/ada-lab-programs/c$ ./a.out
+Enter the size
+4
+4
+Enter the Elements
+0 999 ^C
+chinmaya@chinmaya-Lenovo-G50-70:~/Documents/ada-lab-programs/c$ gcc 11Floyds.c -fopenmp
+chinmaya@chinmaya-Lenovo-G50-70:~/Documents/ada-lab-programs/c$ ./a.out Enter the size
+4
+Enter the Elements
+0 999 3 999
+2 0 999 999
+999 7 0 1
+6 999 999 0
+Thread 0 : a[0][0] = 0
+Thread 0 : a[0][1] = 999
+Thread 0 : a[0][2] = 3
+Thread 0 : a[0][3] = 999
+Thread 0 : a[1][0] = 2
+Thread 0 : a[1][1] = 0
+Thread 0 : a[1][2] = 5
+Thread 0 : a[1][3] = 999
+Thread 0 : a[2][0] = 999
+Thread 0 : a[2][1] = 7
+Thread 0 : a[2][2] = 0
+Thread 0 : a[2][3] = 1
+Thread 0 : a[3][0] = 6
+Thread 0 : a[3][1] = 999
+Thread 0 : a[3][2] = 9
+Thread 0 : a[3][3] = 0
+Thread 0 : a[0][0] = 0
+Thread 0 : a[0][1] = 999
+Thread 0 : a[0][2] = 3
+Thread 0 : a[0][3] = 999
+Thread 0 : a[1][0] = 2
+Thread 0 : a[1][1] = 0
+Thread 0 : a[1][2] = 5
+Thread 0 : a[1][3] = 999
+Thread 0 : a[2][0] = 9
+Thread 0 : a[2][1] = 7
+Thread 0 : a[2][2] = 0
+Thread 0 : a[2][3] = 1
+Thread 0 : a[3][0] = 6
+Thread 0 : a[3][1] = 999
+Thread 0 : a[3][2] = 9
+Thread 0 : a[3][3] = 0
+Thread 1 : a[0][0] = 0
+Thread 1 : a[0][1] = 10
+Thread 1 : a[0][2] = 3
+Thread 1 : a[0][3] = 4
+Thread 1 : a[1][0] = 2
+Thread 1 : a[1][1] = 0
+Thread 1 : a[1][2] = 5
+Thread 1 : a[1][3] = 6
+Thread 1 : a[2][0] = 9
+Thread 1 : a[2][1] = 7
+Thread 1 : a[2][2] = 0
+Thread 1 : a[2][3] = 1
+Thread 1 : a[3][0] = 6
+Thread 1 : a[3][1] = 16
+Thread 1 : a[3][2] = 9
+Thread 1 : a[3][3] = 0
+Thread 1 : a[0][0] = 0
+Thread 1 : a[0][1] = 10
+Thread 1 : a[0][2] = 3
+Thread 1 : a[0][3] = 4
+Thread 1 : a[1][0] = 2
+Thread 1 : a[1][1] = 0
+Thread 1 : a[1][2] = 5
+Thread 1 : a[1][3] = 6
+Thread 1 : a[2][0] = 7
+Thread 1 : a[2][1] = 7
+Thread 1 : a[2][2] = 0
+Thread 1 : a[2][3] = 1
+Thread 1 : a[3][0] = 6
+Thread 1 : a[3][1] = 16
+Thread 1 : a[3][2] = 9
+Thread 1 : a[3][3] = 0
+Shortest path matrix is
+0	10	3	4
+2	0	5	6
+7	7	0	1
+6	16	9	0
+Time taken 0.000977
+*/

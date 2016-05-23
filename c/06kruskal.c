@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
       {
         if (cost[i][j] < min)
         {
-          min < cost[i][j];
+          min = cost[i][j];
           a = u = i;
           b = v = j;
         }
@@ -60,3 +60,23 @@ int main(int argc, char const *argv[])
   printf("Minimum cost  =  %d\n", mincost);
   return 0;
 }
+
+/*Output
+Implementation of Kruskal's algorithm
+Enter the no. of vertices
+6
+Enter the cost adjacency matrix
+0 3 999 1 999 999
+3 0 1 3 999 999
+999 1 0 1 5 4
+1 3 1 0 6 999
+999 999 5 6 0 2
+999 999 4 999 2 0
+The edge of Minimum Spanning tree is
+1 edge(1, 4) = 1
+2 edge(2, 3) = 1
+3 edge(3, 4) = 1
+4 edge(5, 6) = 2
+5 edge(3, 6) = 4
+Minimum cost  =  9
+*/
