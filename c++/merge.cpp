@@ -15,31 +15,21 @@ void merge(int low,int mid,int high)
 	while(i<=mid && j<=high)
 	{
 		if(a[i]<a[j])
-		{
-			b[k]=a[i];
-			k++;i++;
-		}
+			b[k++]=a[i++];
 		else
-		{	
-			b[k]=a[j];
-			k++;j++;
-		}
-	
+			b[k++]=a[j++];
 	}//end while
-	
+
 	while(i<=mid)
 	{
-		b[k]=a[i];
-		k++;i++;
+		b[k++]=a[i++];
 	}
 	while(j<=high)
 	{
-		b[k]=a[j];
-		k++;j++;
+		b[k++]=a[j++];
 	}
-	for(i=low;i<=k-1;i++)
+	for(i=low;i<k;i++)
 		a[i]=b[i];
-		
 }
 
 
@@ -55,7 +45,7 @@ int mergesort(int low,int high)
 		}
 		#pragma omp task
 		{
-			mergesort(low,mid);
+			mergesort(mid+1,high);
 		}
 		merge(low,mid,high);
 	}
@@ -64,69 +54,37 @@ int mergesort(int low,int high)
 
 int main()
 {
-	int size,i,n;
+	int i,n;
 	double start,end;
-	cout<<"enter size of array:";
+	cout<<"Enter size of array :\n";
 	cin>>n;
 	a=new int[n];
-	cout<<"enter"<<n<<" elements";
+	cout<<"Enter "<<n<<" elements\n";
 	omp_set_num_threads(2);
 	srand(0);
 	for(i=0;i<n;i++)
 	{
-		a[i]=rand()%50;	
-		cout<<a[i]<<endl;
+		a[i]=rand()%n;
+		cout<<a[i]<<"\t";
 	}
 	start=omp_get_wtime();
 	mergesort(0,n-1);
 	end=omp_get_wtime();
-	cout<<"\nsorted array";
+	cout<<"\nSorted array : \n";
 	for(i=0;i<n;i++)
 	{
-		cout<<a[i]<<"  ";
-	}	
-	cout<<"time="<<(end-start)<<endl;
+		cout<<a[i]<<"\t";
+	}
+	cout<<"\nTime taken = "<<(end-start)<<endl;
 	return 0;
-}	
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-		
-		
-		
-				
-
-
-
-
-		
-						
+/*Output
+Enter size of array :
+10
+Enter 10 elements
+3	6	7	5	3	5	6	2	9	1
+Sorted array :
+1	2	3	3	5	5	6	6	7	9
+Time taken = 2.305e-05
+*/

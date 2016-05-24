@@ -26,7 +26,7 @@ void dij(int src,int cost[][10],int dist[],int n)
 				u=j;
 			}
 		}//end for1
-		
+
 		visited[u]=1;
 		for(j=0;j<n;j++)//for 2
 		{
@@ -42,58 +42,46 @@ void dij(int src,int cost[][10],int dist[],int n)
 
 int main()
 {	float start,end,t;
-	int n,cost[10][10],dist[10]={0,0,0,0,0,0,0,0,0,0},i,j,src;
-	cout<<"entr no. of vertics:";
+	int n,cost[10][10],dist[10]={0},i,j,src;
+	cout<<"Enter no. of vertics:\n";
 	cin>>n;
-	cout<<"enter adjacency matrix:";
+	cout<<"Enter adjacency matrix:\n";
 	for(i=0;i<n;i++)
 	{	for(j=0;j<n;j++)
 	{
 		//cout<<"enter["<<i<<"]"<<"["<<j<<"]";
 		cin>>cost[i][j];
-		
+
 	}
 	}
-	cout<<"enter source vertex:";
+	cout<<"Enter source vertex:\n";
 	cin>>src;
-	start=clock();	
+	start=clock();
 	dij(src,cost,dist,n);
 	end=clock();
-	cout<<"the shortest path are :";
+	cout<<"The shortest path from "<<src<<" :\n";
 	for(i=0;i<n;i++)
 	{
-		cout<<"to:"<<i<<" "<<dist[i]<<endl;
-		
+		cout<<"to "<<i<<" : "<<dist[i]<<endl;
+
 	}
-	cout<<"time="<<(end-start)/CLOCKS_PER_SEC;
+	cout<<"Time taken = "<<(end-start)/CLOCKS_PER_SEC<<endl;
 	return 0;
-}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-									
+}
+/*Output
+Enter no. of vertics:
+4
+Enter adjacency matrix:
+0 5 999 10
+5 0 7 999
+999 7 0 6
+10 999 6 0
+Enter source vertex:
+1
+The shortest path from 1 :
+to 0 : 5
+to 1 : 0
+to 2 : 7
+to 3 : 13
+Time taken = 4e-06
+*/
