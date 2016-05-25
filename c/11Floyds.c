@@ -7,7 +7,7 @@
  #include <stdio.h>
  #include <omp.h>
 
- #define min(a, b) a < b ? a : b
+ #define min(a, b)(a < b ? a : b)
 
  void floyd(int a[10][10],int n)
  {
@@ -50,18 +50,6 @@ int main(int argc, char const *argv[])
 
 /*Output
 Enter the size
-4
-0 999 3 999
-Enter the Elements
-^C
-chinmaya@chinmaya-Lenovo-G50-70:~/Documents/ada-lab-programs/c$ ./a.out
-Enter the size
-4
-4
-Enter the Elements
-0 999 ^C
-chinmaya@chinmaya-Lenovo-G50-70:~/Documents/ada-lab-programs/c$ gcc 11Floyds.c -fopenmp
-chinmaya@chinmaya-Lenovo-G50-70:~/Documents/ada-lab-programs/c$ ./a.out Enter the size
 4
 Enter the Elements
 0 999 3 999
