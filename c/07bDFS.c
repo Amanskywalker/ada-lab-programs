@@ -23,7 +23,7 @@ void Dfs(int src)
 int main(int argc, char const *argv[])
 {
   int i, j, src;
-  printf("Implementation of DFS traversal \n enter the number of verticies \n : ");
+  printf("Implementation of DFS traversal \n Enter the number of verticies \n : ");
   scanf("%d",&n);
   printf("Enter the Adjecency matrix\n");
   for (i = 0; i < n; ++i)
@@ -47,9 +47,9 @@ int main(int argc, char const *argv[])
 
 /*Output
 Implementation of DFS traversal
- enter the number of verticies
+Enter the number of vertices
  : 7
-Enter the Adjecency matrix
+Enter the Adjacency matrix
 0 1 1 1 1 0 0
 1 0 0 0 0 1 0
 1 0 0 0 0 0 1
