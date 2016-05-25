@@ -136,4 +136,4 @@ Min cost35
 
 The path using algorithm:1->4->2->3->1
 Min cost is:25
-The accurate ratio : 0.714286
+The accurate ratio : 0.714286*/

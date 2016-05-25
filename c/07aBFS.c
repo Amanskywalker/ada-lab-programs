@@ -47,3 +47,27 @@ int main(int argc, char const *argv[])
 	Bfs();
   return 0;
 }
+/*Output
+
+implementation of BFS taversal
+enter the number of verticies of the graph
+6
+enter the adjecency matrix
+6
+0 1 1 1 0 0
+0 0 0 0 1 0
+0 0 0 0 1 1
+0 0 0 0 0 1
+0 0 0 0 0 0
+0 0 0 0 1 0
+enter the source vertex
+1
+
+1 ---> 1
+1 ---> 2
+1 ---> 3
+1 ---> 4
+1 ---> 5
+1 ---> 6
+
+*/
