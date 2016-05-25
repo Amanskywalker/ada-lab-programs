@@ -2,7 +2,6 @@
  * Find Minimum Cost Spanning Tree of a given undirected graph using Prims algorithm
  */
 
-
 #include <stdio.h>
 #include <stdlib.h>
 

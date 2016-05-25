@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 #define MAX 10
-#define MAXIMUM(a,b) a>b?a:b
+#define MAXIMUM(a,b)(a>b?a:b)
 
 void knapsack(int no, int wt, int pt[MAX], int weight[MAX])
 {
