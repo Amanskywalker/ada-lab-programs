@@ -33,6 +33,25 @@ int main(int argc, char const *argv[])
 	for(i = 1; i <= n; i++)
 		for(j = 1; j <= n; j++)
 			scanf("%d", &cost[i][j]);
+
+  // condition to check wether graph is connected or not
+  for (i = 1; i <=n ; i++)
+  {
+    int isdisconneted=1;    // let the graph is diconnected
+    for (j = 1; j <=n ; j++)
+    {
+      if (cost[i][j] > 0 && cost[i][j] < 999)
+      {
+        isdisconneted=0; // not disconnected
+      }
+    }
+    if (isdisconneted)
+    {
+      printf("Given geaph is disconnected\n");
+      return 0;
+    }
+  }
+
   printf("The edge of Minimum Spanning tree is \n");
   while (ne < n)
   {
